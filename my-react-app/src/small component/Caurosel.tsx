@@ -16,7 +16,7 @@ const slidesData: Slide[] = [
     { id: 6, title: "Slide 6", color: "#a78bfa" },
 ];
 
-const VISIBLE = 3;
+const VISIBLE = 5;
 
 export default function Caurosel() {
     const slides = slidesData;

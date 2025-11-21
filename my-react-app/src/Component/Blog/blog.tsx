@@ -36,3 +36,10 @@ export default function Blog() {
         </div>
     );
 }
+
+
+
+
+
+
+// make this design mobile responsive too

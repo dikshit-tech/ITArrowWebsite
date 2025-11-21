@@ -6,6 +6,7 @@ import Services from './Component/Services/services'
 import WhyChooseUs from './Component/Why chooseus/wcu'
 import Testimonials from './Component/testimonials/testimonials'
 import Blog from './Component/Blog/blog'
+import Custom_Footer from './Custom_Footer/Custom_Footer'
 
 function App() {
 
@@ -19,8 +20,7 @@ function App() {
         <WhyChooseUs/>
         <Testimonials/>
         <Blog/>
-        
-
+        <Custom_Footer />
     </>
   )
 }

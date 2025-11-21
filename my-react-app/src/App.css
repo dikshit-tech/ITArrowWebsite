@@ -110,3 +110,19 @@ primarycolor
   border: none;
   cursor: pointer;
 }
+.heroheading
+{
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Poppins';
+ color: rgb(231, 231, 231); 
+ line-height: 2cm;
+}
+.herosubheading
+{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Poppins';
+ color: rgb(231, 231, 231);
+  line-height: 1.5cm;
+}
