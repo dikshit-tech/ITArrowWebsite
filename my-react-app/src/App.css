@@ -126,3 +126,12 @@ primarycolor
  color: rgb(231, 231, 231);
   line-height: 1.5cm;
 }
+
+.secondhero
+{
+  background-image: url('../banner2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  object-fit: cover;
+}

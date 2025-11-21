@@ -5,10 +5,15 @@ import App from './App.tsx'
 import 'flowbite'
 
 import "flowbite/dist/flowbite.css";
+import { BrowserRouter } from 'react-router-dom'
 //import "./index.css"; // your Tailwind CSS
 
 createRoot(document.getElementById('root')!).render(
+  
   <StrictMode>
-    <App />
-  </StrictMode>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+  
 )
