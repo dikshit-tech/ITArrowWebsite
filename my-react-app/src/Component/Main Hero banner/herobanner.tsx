@@ -1,5 +1,5 @@
 import CallButton from "../../small component/CallButton";
-import DiscoverButton from "../../small component/discoverbutton";
+import DiscoverButton from "../../small component/Discoverbutton";
 
 export default function Herobanner() {
     return (

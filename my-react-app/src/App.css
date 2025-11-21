@@ -1,6 +1,16 @@
 @import "tailwindcss";
+@import "flowbite";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+*
+{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .bg-hero {
-  background-image: url('../herobanner.jpg');
+  background-image: url('../wer.webp');
   background-size: cover;
   background-position: center;
   height: 800px;
@@ -22,4 +32,81 @@ h2{
  color: rgb(226, 226, 226); 
  line-height: 1.5cm;  
 
+}
+.outer
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.inner
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1190px;
+}
+.slogan
+{
+  font: 22px ;
+  font-family: 'playfair display';
+  color: #ff6637;
+  font-weight: 600;
+  font-style: italic;
+
+}
+.title
+{
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Poppins';
+ color: #1f1c1c; 
+ line-height: 1.5em;  
+
+}
+.description
+{
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Poppins';
+ color: rgb(36, 34, 34); 
+ line-height: 25px;
+ text-align: justify;
+
+}
+primarycolor
+{
+  color: #ff6637;
+}
+.headertwo
+{
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  color: #ff6637;
+
+ line-height: 1.5em;
+
+}
+.headertwo:hover
+{
+  color: #1f1c1c;
+  cursor: pointer;
+}
+
+.buttonstyle
+{
+  background-color: #ff6637;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins';
+  border: none;
+  cursor: pointer;
 }

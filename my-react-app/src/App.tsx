@@ -1,16 +1,24 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './Header/Header'
 import Herobanner from './Component/Main Hero banner/herobanner'
+import About from './Component/About/About'
+import Services from './Component/Services/services'
+import WhyChooseUs from './Component/Why chooseus/wcu'
+import Testimonials from './Component/testimonials/testimonials'
+import Blog from './Component/Blog/blog'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
 
         <Header/>
         <Herobanner/>
+        <About/>
+        <Services/>
+        <WhyChooseUs/>
+        <Testimonials/>
+        <Blog/>
         
 
     </>

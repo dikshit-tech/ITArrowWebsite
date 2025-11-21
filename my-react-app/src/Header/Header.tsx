@@ -31,7 +31,7 @@ export default function Header() {
                             <img className="h-20" src="./logo.webp" alt="" />
                         </div>
                         <div>
-                            <ul className="flex gap-5 text-xl font-poppins  items-center ">
+                            <ul className="flex gap-5 text-xl font-500  font-poppins   items-center ">
                                 <li>Home</li>
                                 <li>About us</li>
                                 <li>Services</li>
