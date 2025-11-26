@@ -14,7 +14,7 @@ export default function Blog() {
                         <button className="buttonstyle">Read More</button>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-6 ">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                     <div className="flex flex-col gap-3 shadow-xl p-5 rounded-3xl  ">
                         <img className="h-[200px] object-cover rounded-2xl" src="../image.jpg" alt="" />
                         <h2 className="headertwo text-center">Maximizing SEO Impact: Strategies for 2024</h2>
@@ -37,9 +37,3 @@ export default function Blog() {
     );
 }
 
-
-
-
-
-
-// make this design mobile responsive too

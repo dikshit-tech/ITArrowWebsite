@@ -1,14 +1,11 @@
 export default function About()
 {
     return (
-        <div className="outer pb-[200px]!">
-            <div className="inner">
+        <div className="outer">
+            <div className="inner about ">
                 <div className="flex box-border relative  w-[50%] p-4 " >
-                    <img className="w-[400px] object-cover left-40 top-30 absolute h-[400px] border-10 border-[#ff6637] rounded-lg" src="../banner1.jpg" alt="" />
-                     <img className=" w-[400px]  object-cover    h-[400px] border-10 border-[#727272] rounded-lg" src="../banner2.jpg" alt="" />
-                   
-                    
-
+                     <img className="w-[60%] absolute object-cover left-40 top-30 border-10 border-[#ff6637] rounded-lg" src="../banner1.jpg" alt="" />
+                     <img className=" w-[70%]  object-cover border-10 border-[#727272] rounded-lg" src="../banner2.jpg" alt="" />
                 </div>
                 <div className="w-[50%] flex flex-col gap-2 justify-center mb-5 ">
                     <p className="slogan">About IT Arrow Technologies</p>

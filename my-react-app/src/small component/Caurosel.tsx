@@ -1,153 +1,106 @@
-import { useState, useMemo } from "react";
-
-type Slide = {
-    id: number;
-    title?: string;
-    color?: string;
-    img?: string;
-};
-
-const slidesData: Slide[] = [
-    { id: 1, title: "Slide 1", color: "#f87171" },
-    { id: 2, title: "Slide 2", color: "#fb923c" },
-    { id: 3, title: "Slide 3", color: "#fbbf24" },
-    { id: 4, title: "Slide 4", color: "#34d399" },
-    { id: 5, title: "Slide 5", color: "#60a5fa" },
-    { id: 6, title: "Slide 6", color: "#a78bfa" },
-];
-
-const VISIBLE = 5;
+import { Swiper, SwiperSlide } from "swiper/react";
+// @ts-ignore
+import "swiper/css";
+//@ts-ignore
+import "swiper/css/navigation";
 
 export default function Caurosel() {
-    const slides = slidesData;
-    const maxIndex = Math.max(0, slides.length - VISIBLE);
-    const [index, setIndex] = useState<number>(0);
-
-    const slideWidthPercent = 100 / VISIBLE; // each slide takes 1/VISIBLE of container
-
-    const trackWidthPercent = (slides.length * slideWidthPercent);
-
-    const pages = useMemo(() => maxIndex + 1, [maxIndex]);
-
-    const prev = () => setIndex((p) => (p <= 0 ? maxIndex : p - 1));
-    const next = () => setIndex((p) => (p >= maxIndex ? 0 : p + 1));
-    const goTo = (page: number) => setIndex(page);
-
     return (
-        <div style={{ width: "100%", boxSizing: "border-box" }}>
-            <div
-                style={{
-                    position: "relative",
-                    overflow: "hidden",
-                    width: "100%",
+       
+         <div className="md:w-[1160px] carousel p-2 overflow-hidden">
+            <Swiper className=""
+                // modules={[Autoplay]}
+                slidesPerView={1}        // 3 items per slide
+                spaceBetween={20}        // gap between slides
+                loop={true}              // infinite loop
+                autoplay={{ delay: 3000 }} // auto-play every 3 seconds
+                breakpoints={{
+                    320: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
                 }}
             >
-                {/* Track */}
-                <div
-                    style={{
-                        display: "flex",
-                        width: `${trackWidthPercent}%`,
-                        transform: `translateX(-${index * slideWidthPercent}%)`,
-                        transition: "transform 300ms ease",
-                    }}
-                >
-                    {slides.map((s) => (
-                        <div
-                            key={s.id}
-                            style={{
-                                flex: `0 0 ${slideWidthPercent}%`,
-                                boxSizing: "border-box",
-                                padding: 8,
-                            }}
-                        >
-                            <div
-                                style={{
-                                    height: 200,
-                                    borderRadius: 8,
-                                    background: s.color ?? "#ddd",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    color: "white",
-                                    fontSize: 20,
-                                    fontWeight: 600,
-                                    userSelect: "none",
-                                    boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-                                }}
-                            >
-                                {s.title ?? `Slide ${s.id}`}
-                            </div>
+              
+                <SwiperSlide >
+                    <div className="bg-gray-100 border border-[#ff6637] p-4 rounded-lg  text-center flex flex-col justify-between gap-7 items-center w-full md:h-100">
+                        <div className="flex justify-center items-center ">
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star-half text-yellow-400"></i>
                         </div>
-                    ))}
-                </div>
+                        <p className="description text-center!">"We partnered with IT Arrow Technologies for a complete website overhaul.
+                            The team was fantastic to work with, delivering a stunning website that is not only visually appealing but also highly functional.
+                            We highly recommend their services to any business looking to enhance their online presence."</p>
+                        <div className="flex flex-col justify-center gap-4 items-center">
+                            <img src="../user1.png" className="h-16" alt="" />
+                            <p className="slogan">John Tylin</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
 
-                {/* Controls */}
-                <button
-                    onClick={prev}
-                    aria-label="Previous"
-                    style={{
-                        position: "absolute",
-                        left: 8,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        background: "rgba(0,0,0,0.5)",
-                        color: "#fff",
-                        border: "none",
-                        width: 36,
-                        height: 36,
-                        borderRadius: 18,
-                        cursor: "pointer",
-                    }}
-                >
-                    ‹
-                </button>
-                <button
-                    onClick={next}
-                    aria-label="Next"
-                    style={{
-                        position: "absolute",
-                        right: 8,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        background: "rgba(0,0,0,0.5)",
-                        color: "#fff",
-                        border: "none",
-                        width: 36,
-                        height: 36,
-                        borderRadius: 18,
-                        cursor: "pointer",
-                    }}
-                >
-                    ›
-                </button>
-            </div>
+               
+                 
+                <SwiperSlide>
+                    <div className="bg-gray-100 p-4 border border-[#ff6637] rounded-lg text-center flex flex-col justify-between gap-7 items-center md:h-100">
+                        <div className="flex justify-center items-center ">
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p className="description text-center!">"Working with IT Arrow Technologies has been a game-changer for our business. Our website now looks amazing and functions flawlessly, and our search engine rankings have improved dramatically. They are professional, responsive, and truly experts in their field."</p>
+                        <div className="flex flex-col justify-center gap-4 items-center">
+                            <img src="../user2.png" className="h-16" alt="" />
+                            <p className="slogan">Ema Imli</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
 
-            {/* Dots */}
-            <div
-                style={{
-                    display: "flex",
-                    gap: 8,
-                    justifyContent: "center",
-                    marginTop: 12,
-                }}
-            >
-                {Array.from({ length: pages }).map((_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => goTo(i)}
-                        aria-label={`Go to slide ${i + 1}`}
-                        style={{
-                            width: 10,
-                            height: 10,
-                            borderRadius: 5,
-                            border: "none",
-                            background: i === index ? "#111827" : "#d1d5db",
-                            cursor: "pointer",
-                            padding: 0,
-                        }}
-                    />
-                ))}
-            </div>
+               
+                <SwiperSlide>
+                    <div className="bg-gray-100 p-4 border border-[#ff6637] rounded-lg text-center flex flex-col justify-between gap-7 items-center md:h-100">
+                        <div className="flex justify-center items-center ">
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star-half text-yellow-400"></i>
+                        </div>
+                        <p className="description text-center!">"IT Arrow Technologies exceeded our expectations in every way. Their website development team built a beautiful, intuitive site that has received great feedback from our customers. The SEO services have significantly boosted our visibility online, leading to increased leads and sales."</p>
+                        <div className="flex flex-col justify-center gap-4 items-center">
+                            <img src="../user3.png" className="h-16" alt="" />
+                            <p className="slogan">Daniel Banton</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+               
+                <SwiperSlide>
+                    <div className="bg-gray-100 p-4 border border-[#ff6637] rounded-lg text-center flex flex-col justify-between gap-7 items-center md:h-100">
+                        <div className="flex justify-center items-center ">
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                            <i className="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p className="description text-center!">"IT Arrow Technologies transformed our online presence! Their website development team created a sleek, user-friendly site that perfectly represents our brand. Plus, their SEO services have significantly increased our organic traffic. We couldn't be happier with the results and highly recommend their services."</p>
+                        <div className="flex flex-col justify-center gap-4 items-center">
+                            <img src="../user4.png" className="h-16" alt="" />
+                            <p className="slogan">Jack Paul</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+
+            </Swiper>
         </div>
     );
+
+
+
+
 }

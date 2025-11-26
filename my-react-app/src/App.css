@@ -21,14 +21,14 @@
 h1{
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family:'poppins',sans-serif;
  color: rgb(231, 231, 231); 
  line-height: 2cm;
 }
 h2{
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'poppins', sans-serif;
  color: rgb(226, 226, 226); 
  line-height: 1.5cm;  
 
@@ -42,6 +42,23 @@ h2{
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.background
+{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+  background-image:url("../group2.jpg");
+  background-position: center;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
 .inner
 {
   display: flex;
@@ -52,33 +69,39 @@ h2{
 }
 .slogan
 {
-  font: 22px ;
-  font-family: 'playfair display';
+  font-family:'poppins',sans-serif;
   color: #ff6637;
-  font-weight: 600;
-  font-style: italic;
+  font-weight:600;
+  text-transform: uppercase;
+  /* font-style: italic; */
+  border-left:10px solid #474d51;
+ 
+  padding: 0px 10px;
+ 
+  border-radius: 8px;
 
 }
 .title
 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
-  font-family: 'Poppins';
- color: #1f1c1c; 
+  font-family:'poppins',sans-serif;
+ color: #474d51; 
  line-height: 1.5em;  
 
 }
 .description
 {
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Poppins';
- color: rgb(36, 34, 34); 
+  font-size: 16px;
+  font-weight:500;
+  font-family: 'Poppins', sans-serif;
+ color: rgb(36, 35, 35); 
  line-height: 25px;
+ letter-spacing: 1px;
  text-align: justify;
 
 }
-primarycolor
+.primarycolor
 {
   color: #ff6637;
 }
@@ -88,7 +111,7 @@ primarycolor
   font-weight: bold;
   font-family: 'Poppins';
   color: #ff6637;
-
+  text-align: center;
  line-height: 1.5em;
 
 }
@@ -114,17 +137,17 @@ primarycolor
 {
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Poppins';
+  font-family: 'poppins';
  color: rgb(231, 231, 231); 
  line-height: 2cm;
 }
 .herosubheading
 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   font-family: 'Poppins';
  color: rgb(231, 231, 231);
-  line-height: 1.5cm;
+  line-height: 1.0cm;
 }
 
 .secondhero
@@ -135,3 +158,81 @@ primarycolor
   height: 400px;
   object-fit: cover;
 }
+
+@media (max-width:786px)
+{
+  h1
+  {
+    font-size: 40px;
+    line-height: 1.5cm;
+    text-align: center;
+  }
+  .bg-hero
+  {
+    height: 600px;
+  }
+  .hero_p
+  {
+    font-size: 22px;
+    line-height: 0.8cm;
+    text-align: center;
+  }
+  .hero_button
+  {
+    justify-content: center;
+  }
+  .inner
+  {
+    flex-direction: column;
+    /* gap: 100px; */
+    
+  }
+  .inner div:not(.carousel) 
+  {
+    padding:20px;
+    width: 100% !important;
+    text-align: center;
+  }
+  .carousel div
+  {
+    padding: 0px !important;
+  }
+  .about
+  {
+    flex-direction: column-reverse !important;
+  }
+}
+
+@media (min-width:786px)
+{
+  .inner{
+    flex-direction: row;
+  }
+  
+}
+
+.navlinkstyle
+{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins';
+  color: #000000;
+ padding: 5px 10px;
+ margin: 5px;
+}
+
+.navlinkstyle:hover
+{
+  background-color: #ff6637;
+  /* padding: 10px; */
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s;
+}
+
+nav .mx-auto
+{
+  width: 100%;
+}
+
+

@@ -1,9 +1,9 @@
-import About from "../Component/About/About";
-import Blog from "../Component/Blog/blog";
+import ExtendAboutUs from "../Component/About/ExtendAboutUs";
+import CtaOne from "../Component/CTAs/CtaOne";
+import CtaTwo from "../Component/CTAs/CtaTwo";
+import MissonAndVission from "../Component/Mission And Vission/MissonAndVission";
 import SecondHeroBanner from "../Component/secondary Hero Banner/SecondHeroBanner";
-import Testimonials from "../Component/testimonials/testimonials";
 import WhyChooseUs from "../Component/Why chooseus/wcu";
-import Services from "./Service";
 import { Helmet } from "react-helmet";
 
 export default function AboutUs() {
@@ -15,11 +15,12 @@ export default function AboutUs() {
       </Helmet>
         <div>
             <SecondHeroBanner pagename="About Us" desc="About Our Company" />
-            <About />
-            <Services />
+            <ExtendAboutUs/>
+            <MissonAndVission/>
             <WhyChooseUs />
-            <Testimonials />
-            <Blog />
+            <CtaOne/>
+            <CtaTwo/>
+           
         </div>
         </>
     );

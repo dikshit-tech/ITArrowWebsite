@@ -1,5 +1,6 @@
 import About from "../Component/About/About";
 import Blog from "../Component/Blog/blog";
+import Client from "../Component/Clients/Client";
 import Herobanner from "../Component/Main Hero banner/herobanner";
 import Services from "../Component/Services/services";
 import Testimonials from "../Component/testimonials/testimonials";
@@ -14,6 +15,7 @@ export default function Homepage() {
             <WhyChooseUs />
             <Testimonials />
             <Blog />
+            <Client/>
         </div>
     );
 }

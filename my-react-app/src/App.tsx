@@ -7,9 +7,6 @@ import AboutUs from './pages/AboutUs'
 import Service from './pages/Service'
 import Portfolio from './pages/Portfolio'
 import ContactUs from './pages/ContactUs'
-
-
-
 function App() {
 
   return (
