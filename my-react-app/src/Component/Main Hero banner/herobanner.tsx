@@ -10,7 +10,7 @@ export default function Herobanner() {
                     <div className=" w-full" >
                         
                         <h1 className="text-5xl  text-white  md:text-8xl font-bold">
-                            Best<TypeAnimation sequence={[' Website Design', 1000, ' SEO ', 1000]} repeat={Infinity} wrapper="span"
+                            Best<TypeAnimation sequence={[' Website Design', 1000, ' SEO ', 1000,' Advertisements',1000]} repeat={Infinity} wrapper="span"
                                 speed={40} style={{color:'#ff6637'}} /> 
                         </h1>
                         <h1>Company In USA</h1>

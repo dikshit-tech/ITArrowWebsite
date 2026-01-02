@@ -235,4 +235,17 @@ nav .mx-auto
   width: 100%;
 }
 
+.admin_nav_item{
+  /* w-full p-3 hover:rounded text-white font-bold hover:bg-amber-50 hover:text-[#ff6637] border-b border-white */
+  width:100%;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  border-bottom: 1px solid white;
 
+}
+.admin_nav_item:hover{
+  border-radius: 5px;
+  background: white;
+  color: #ff6637;
+}

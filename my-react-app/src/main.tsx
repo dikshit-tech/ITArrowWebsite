@@ -4,14 +4,14 @@ import './index.css'
 import App from './App.tsx'
 import 'flowbite'
 import "flowbite/dist/flowbite.css";
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 //import "./index.css"; // your Tailwind CSS
 
 createRoot(document.getElementById('root')!).render(
   
   <StrictMode>
     <BrowserRouter>
-      <App />
+    <App />
     </BrowserRouter>
   </StrictMode>
   
