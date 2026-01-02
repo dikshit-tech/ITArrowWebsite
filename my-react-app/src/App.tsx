@@ -13,6 +13,8 @@ import Testimonials from './Admin Components/Testimonials'
 import Projects from './Admin Components/Projects'
 import Setting from './Admin Components/Setting'
 import "react-quill/dist/quill.snow.css";
+import { ToastContainer } from 'react-toastify'
+import Blog_List from './pages/Blog_List'
 
 function App() {
 
@@ -35,10 +37,21 @@ function App() {
           <Route path='/service' element={<Service />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/blog-list' element={<Blog_List />}/>
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
-
+    <ToastContainer
+        position="top-right" // top-right, top-left, bottom-right, bottom-left
+        autoClose={3000} // 3 seconds
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   )
 }

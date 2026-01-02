@@ -1,8 +1,12 @@
 import{ useState } from "react";
 import ReactQuill from "react-quill";
+interface EditorProps {
+  value: string;
+  onChange: (value: string) => void;
+}
 
-export default function Editor() {
-  const [value, setValue] = useState("");
+export default function Editor({ value, onChange }: EditorProps) {
+ /// const [Value, setValue] = useState("");
    const modules = {
     toolbar: [
       [{ header: [1, 2, 3, false] }],
@@ -18,7 +22,7 @@ export default function Editor() {
       theme="snow" 
       value={value} 
       modules={modules}
-      onChange={setValue} 
+      onChange={onChange} 
       placeholder="Write something..."
        style={{height:"200px" }}
     />

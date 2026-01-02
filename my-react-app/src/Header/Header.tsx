@@ -42,6 +42,7 @@ export default function Header() {
                                 <NavbarLink className="navlinkstyle"> <Link to="/service">Services</Link> </NavbarLink>
                                 <NavbarLink className="navlinkstyle"> <Link to="/portfolio">Portfolio</Link> </NavbarLink>
                                 <NavbarLink className="navlinkstyle" href="https://buy.stripe.com/bIY7tPbWxcvS1Es000"> Make a Payment </NavbarLink>
+                                <NavbarLink className="navlinkstyle"> <Link to="/blog-List">Blog</Link> </NavbarLink>
                                 <NavbarLink className="navlinkstyle"> <Link to="/contact-us">Contact Us</Link> </NavbarLink>
                             </NavbarCollapse>
                             <div className="hidden md:block">

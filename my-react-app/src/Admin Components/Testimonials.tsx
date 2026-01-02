@@ -37,7 +37,7 @@ export default function Testimonials() {
                         </div>
                         <div className="flex flex-col gap-2">
                             <label className="text-gray-600 font-semibold">Testimonials Description</label>
-                            <Editor />
+                            {/* <Editor  /> */}
                         </div>
                         <div className="flex flex-col gap-2">
                             <label className="text-gray-600 font-semibold">Featured Image</label>
